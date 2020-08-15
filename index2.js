@@ -22,4 +22,6 @@ employees.addEmployees(json);
 employees.addEmployees(proto);
 
 const bytes = employees.serializeBinary();
-fs.writeFileSync("protodata", bytes);
+fs.writeFileSync("protoData", bytes);
+
+console.log(Schema.Employees.deserializeBinary(bytes).toString());
